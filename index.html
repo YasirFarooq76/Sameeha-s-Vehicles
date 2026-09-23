@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sameeha's Vehicles</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&display=swap">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  --ink:#14182B;--muted:#5B6382;--line:#DCE1EE;--you:#1F5BFF;--ai:#E8730C;--bad:#D62F3B}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;height:100%;background:#fff;color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif}
+.app{height:100%;max-width:900px;margin:0 auto;display:flex;flex-direction:column;padding:10px 12px 6px;gap:8px}
+.top{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center}
+.card{border:2px solid var(--line);border-radius:14px;padding:6px 10px;text-align:center}
+.card span{display:block;font-weight:700;color:var(--muted);font-size:.9rem}
+.card b{font-size:1.8rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.you{border-color:var(--you)}.you b{color:var(--you)}
+.ai{border-color:var(--ai)}.ai b{color:var(--ai)}
+.mid{display:flex;flex-direction:column;align-items:center;gap:4px}
+#time{font-size:1.8rem;font-weight:800;font-variant-numeric:tabular-nums}
+#time.low{color:var(--bad)}
+#snd,#pause{font:700 .85rem "Bricolage Grotesque",system-ui,sans-serif;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:20px;padding:6px 12px;cursor:pointer}
+#arena{position:relative;flex:1;min-height:0;overflow:hidden;border:2px solid var(--line);border-radius:16px;background:#fff;touch-action:manipulation;user-select:none;-webkit-user-select:none;cursor:crosshair}
+.v{position:absolute;left:0;top:0;display:flex;align-items:center;justify-content:center;will-change:transform;cursor:pointer}
+.em{display:block;line-height:1;pointer-events:none}
+.pt{position:absolute;bottom:-3px;right:-3px;font:700 .65rem system-ui,sans-serif;font-style:normal;background:var(--ink);color:#fff;border-radius:8px;padding:1px 5px;pointer-events:none}
+.fl{position:absolute;font-weight:800;font-size:1.4rem;pointer-events:none;transform:translate(-50%,-50%);animation:fl .9s ease-out forwards;text-shadow:0 0 3px #fff}
+@keyframes fl{from{opacity:1;transform:translate(-50%,-50%)}to{opacity:0;transform:translate(-50%,-170%)}}
+.ring{position:absolute;width:20px;height:20px;border:3px solid var(--ai);border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);animation:rg .5s ease-out forwards}
+@keyframes rg{to{width:84px;height:84px;opacity:0}}
+.ov{position:absolute;inset:0;background:rgba(255,255,255,.95);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;gap:10px;cursor:default}
+.ov[hidden]{display:none}
+.ov h2{margin:0;font-size:1.8rem;font-weight:800;letter-spacing:-.02em}
